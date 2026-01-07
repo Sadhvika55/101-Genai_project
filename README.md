@@ -43,30 +43,30 @@ Used to extract text from PDF research papers.
 scikit-learn
 Used for similarity calculations and optional evaluation utilities.
 
-2. Prepare the Corpus
-Place all LLM research paper PDF files inside the papers/ folder.
+###2. Prepare the Corpus
+(Place all LLM research paper PDF files inside the papers/ folder.)
 
-3. Extract Text from PDFs
+###3. Extract Text from PDFs
 Run the following command:
 python extract_text.py
-Extracted text files are stored in the texts/ folder.
+(Extracted text files are stored in the texts/ folder.)
 
-4. Chunk the Text
+###4. Chunk the Text
 Run:
 python chunk_text.py
-Chunked text is saved in chunks/all_chunks.json.
+(Chunked text is saved in chunks/all_chunks.json.)
 
-5. Generate Embeddings
+###5. Generate Embeddings
 Run:
 python embeddings.py
-Generated embeddings are stored in chunks/embeddings.npy.
+(Generated embeddings are stored in chunks/embeddings.npy.)
 
-6. Run Baseline Retrieval
+###6. Run Baseline Retrieval
 Run:
 python retrieve_chunks.py
-Retrieves top-K chunks using the baseline similarity-based retrieval method.
+(Retrieves top-K chunks using the baseline similarity-based retrieval method.)
 
-7. Run Improved Retrieval
+###7. Run Improved Retrieval
 Run:
 python improved_retrieval.py
 
