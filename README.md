@@ -13,16 +13,16 @@ pip install -r requirements.txt
 Required libraries:
 
 sentence-transformers
-faiss-cpu
-numpy
-PyMuPDF
-scikit-learn
+-faiss-cpu
+-numpy
+-PyMuPDF
+-scikit-learn
 
-pip install sentence-transformers ->Installs pre-trained transformer models used to convert text (chunks and queries) into numerical embeddings.
-pip install faiss-cpu ->Installs FAISS, which is used to perform fast similarity search on embeddings for retrieval.
-pip install numpy ->Provides numerical array operations required to store and process embeddings.
-pip install pymupdf ->Enables extraction of text from PDF research papers.
-pip install scikit-learn ->Used for utility functions such as similarity calculations and optional evaluation metrics.
+-pip install sentence-transformers ->Installs pre-trained transformer models used to convert text (chunks and queries) into numerical embeddings.
+-pip install faiss-cpu ->Installs FAISS, which is used to perform fast similarity search on embeddings for retrieval.
+-pip install numpy ->Provides numerical array operations required to store and process embeddings.
+-pip install pymupdf ->Enables extraction of text from PDF research papers.
+-pip install scikit-learn ->Used for utility functions such as similarity calculations and optional evaluation metrics.
 
 
 2. Prepare the Corpus
