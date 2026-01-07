@@ -8,10 +8,8 @@ However, baseline retrieval methods often return loosely relevant or incomplete 
 This project implements and evaluates an **improved retrieval strategy** for a RAG system using a corpus of **top research papers on Large Language Models (LLMs)**.  
 The goal is to provide **more coherent, complete, and contextually relevant evidence** to the language model before response generation.
 
-Install Dependencies
+1.Install Dependencies
 pip install -r requirements.txt
-
-
 Required libraries:
 
 sentence-transformers
@@ -27,25 +25,25 @@ pip install pymupdf ->Enables extraction of text from PDF research papers.
 pip install scikit-learn ->Used for utility functions such as similarity calculations and optional evaluation metrics.
 
 
-3. Prepare the Corpus
+2. Prepare the Corpus
 Place all LLM research paper PDFs in the papers/ folder.
 
-4. Extract Text from PDFs
+3. Extract Text from PDFs
 python extract_text.py
 Extracted text files are stored in the texts/ folder.
 
-5. Chunk the Text
+4. Chunk the Text
 python chunk_text.py
 Chunked text is saved in chunks/all_chunks.json.
 
-6. Generate Embeddings
+5. Generate Embeddings
 python embeddings.py
 Embeddings are stored in chunks/embeddings.npy.
 
-7. Run Baseline Retrieval
+6. Run Baseline Retrieval
 python retrieve_chunks.py
 
-8. Run Improved Retrieval
+7. Run Improved Retrieval
 python improved_retrieval.py
 
 
