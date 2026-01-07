@@ -48,41 +48,26 @@ Place all LLM research paper PDF files inside the papers/ folder.
 
 3. Extract Text from PDFs
 Run the following command:
-
-bash
-Copy code
 python extract_text.py
 Extracted text files are stored in the texts/ folder.
 
 4. Chunk the Text
 Run:
-
-bash
-Copy code
 python chunk_text.py
 Chunked text is saved in chunks/all_chunks.json.
 
 5. Generate Embeddings
 Run:
-
-bash
-Copy code
 python embeddings.py
 Generated embeddings are stored in chunks/embeddings.npy.
 
 6. Run Baseline Retrieval
 Run:
-
-bash
-Copy code
 python retrieve_chunks.py
 Retrieves top-K chunks using the baseline similarity-based retrieval method.
 
 7. Run Improved Retrieval
 Run:
-
-bash
-Copy code
 python improved_retrieval.py
 
 
