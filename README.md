@@ -43,7 +43,7 @@ Used to extract text from PDF research papers.
 scikit-learn
 Used for similarity calculations and optional evaluation utilities.
 
-###2. Prepare the Corpus
+##2. Prepare the Corpus
 (Place all LLM research paper PDF files inside the papers/ folder.)
 
 ###3. Extract Text from PDFs
