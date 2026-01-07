@@ -8,44 +8,82 @@ However, baseline retrieval methods often return loosely relevant or incomplete 
 This project implements and evaluates an **improved retrieval strategy** for a RAG system using a corpus of **top research papers on Large Language Models (LLMs)**.  
 The goal is to provide **more coherent, complete, and contextually relevant evidence** to the language model before response generation.
 
-1.Install Dependencies
+## Setup Instructions
+
+### 1. Install Dependencies
+Install all required libraries using:
+
 pip install -r requirements.txt
-Required libraries:
+Required Libraries:
 
 sentence-transformers
--faiss-cpu
--numpy
--PyMuPDF
--scikit-learn
 
--pip install sentence-transformers ->Installs pre-trained transformer models used to convert text (chunks and queries) into numerical embeddings.
--pip install faiss-cpu ->Installs FAISS, which is used to perform fast similarity search on embeddings for retrieval.
--pip install numpy ->Provides numerical array operations required to store and process embeddings.
--pip install pymupdf ->Enables extraction of text from PDF research papers.
--pip install scikit-learn ->Used for utility functions such as similarity calculations and optional evaluation metrics.
+faiss-cpu
 
+numpy
+
+PyMuPDF
+
+scikit-learn
+
+Dependency Purpose:
+
+sentence-transformers
+Used to convert text chunks and user queries into numerical embeddings.
+
+faiss-cpu
+Used for fast similarity search over embedding vectors during retrieval.
+
+numpy
+Provides numerical array operations for storing and processing embeddings.
+
+PyMuPDF
+Used to extract text from PDF research papers.
+
+scikit-learn
+Used for similarity calculations and optional evaluation utilities.
 
 2. Prepare the Corpus
-Place all LLM research paper PDFs in the papers/ folder.
+Place all LLM research paper PDF files inside the papers/ folder.
 
 3. Extract Text from PDFs
+Run the following command:
+
+bash
+Copy code
 python extract_text.py
 Extracted text files are stored in the texts/ folder.
 
 4. Chunk the Text
+Run:
+
+bash
+Copy code
 python chunk_text.py
 Chunked text is saved in chunks/all_chunks.json.
 
 5. Generate Embeddings
+Run:
+
+bash
+Copy code
 python embeddings.py
-Embeddings are stored in chunks/embeddings.npy.
+Generated embeddings are stored in chunks/embeddings.npy.
 
 6. Run Baseline Retrieval
+Run:
+
+bash
+Copy code
 python retrieve_chunks.py
+Retrieves top-K chunks using the baseline similarity-based retrieval method.
 
 7. Run Improved Retrieval
-python improved_retrieval.py
+Run:
 
+bash
+Copy code
+python improved_retrieval.py
 
 
 ## Implementation Details
