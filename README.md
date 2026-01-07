@@ -12,7 +12,6 @@ The goal is to provide **more coherent, complete, and contextually relevant evid
 
 1. Install Dependencies
 Install all required libraries using:
-
 pip install -r requirements.txt
 Required Libraries:
 
